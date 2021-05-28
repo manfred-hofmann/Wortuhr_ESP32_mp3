@@ -19,7 +19,7 @@
 #define WIFI_BEEPS                             // ob die WLAN Verbunden Meldung kommt
 
 //#define NONE_TECHNICAL_ZERO                  // ob die Null bei Feed mit oder ohne Schrägstrich angezeigt wird.
-#define AUTO_MODECHANGE_TIME 900               // Default AutoMode Change Periode. Die eigentliche Periode wird in Settings eingestellt.
+#define AUTO_MODECHANGE_TIME 180               // Default AutoMode Change Periode. Die eigentliche Periode wird in Settings eingestellt.
 #define SHOW_MODE_TIMEOUT 3500                 // Timer bis es im Mode Modus zum nächsten Mode geht
 #define FEED_SPEED 120                         // wie schnell die Buchstaben über die Uhr huschen
 #define TRANSITION_SPEED 90                    // wie schnell die Transitions laufen
@@ -115,8 +115,8 @@
 
 
 // Touch Empfindlichkeit
-#define MODE_TOUCH_SENS 1                        // Empfindlichkeit der Mode Touch Sensoren 1-20 (je kleiner desto empfindlicher)
-#define ONOFF_TOUCH_SENS 2                       // Empfindlichkeit der OnOff Touch Sensoren 1-20 (je kleiner desto empfindlicher)
+#define MODE_TOUCH_SENS 3                        // Empfindlichkeit der Mode Touch Sensoren 1-20 (je kleiner desto empfindlicher)
+#define ONOFF_TOUCH_SENS 3                       // Empfindlichkeit der OnOff Touch Sensoren 1-20 (je kleiner desto empfindlicher)
 
 // Ist ein BME280 an Board
 #define SENSOR_BME280

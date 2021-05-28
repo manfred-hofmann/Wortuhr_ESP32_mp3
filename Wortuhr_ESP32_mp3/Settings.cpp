@@ -31,11 +31,11 @@ void Settings::loadFromNVS()
     mySettings.wlanssid =             preferences.getString("wlanssid",WIFI_SID);
     mySettings.wlanpw =               preferences.getString("wlanpw",WIFI_PW);
     mySettings.useAbc =               preferences.getBool  ("useAbc", true);
-    mySettings.brightness =           preferences.getUShort("brightness", 90);
+    mySettings.brightness =           preferences.getUShort("brightness", 80);
     mySettings.color =                preferences.getUChar ("color", WHITE);
     mySettings.colorChange =          preferences.getUChar ("colorChange", COLORCHANGE_FIVE);
     mySettings.transition =           preferences.getUChar ("transition",TRANSITION_ALLE_NACHEINANDER);
-    mySettings.modeChange =           preferences.getBool  ("modeChange",false);
+    mySettings.modeChange =           preferences.getBool  ("modeChange",true);
     mySettings.itIs =                 preferences.getBool  ("itIs",true);
     mySettings.alarm1 =               preferences.getBool  ("alarm1",false);
     mySettings.alarm1Time =           preferences.getULong ("alarm1Time",0);
@@ -44,9 +44,9 @@ void Settings::loadFromNVS()
     mySettings.alarm2Time =           preferences.getULong ("alarm2Time",0);
     mySettings.alarm2Weekdays =       preferences.getUChar ("alarm2Weekdays",0b11111110);
     mySettings.nightOffTime =         preferences.getULong ("nightOffTime",10800);
-    mySettings.dayOnTime =            preferences.getULong ("dayOnTime",10860);
+    mySettings.dayOnTime =            preferences.getULong ("dayOnTime",14120);
     mySettings.hourBeep =             preferences.getBool  ("hourBeep",true);
-    mySettings.volume =               preferences.getShort ("volume",90);
+    mySettings.volume =               preferences.getShort ("volume",70);
     mySettings.sprecher =             preferences.getBool  ("sprecher",true);  //vicki
     mySettings.randomsound =          preferences.getBool  ("randomsound",false);
     mySettings.weekdaysoundfile[0] =  preferences.getUChar ("wdsoundfile0",8);  //Sonntag
@@ -61,7 +61,7 @@ void Settings::loadFromNVS()
     mySettings.vickihans24h =         preferences.getBool  ("vickihans24h",false);
     mySettings.ntphost =              preferences.getString("ntphost",NTP_SERVER);
     mySettings.corner_color =         preferences.getUChar ("co_color", ORANGE);
-    mySettings.corner_colorChange =   preferences.getUChar ("co_colorChange", COLORCHANGE_MAIN);
+    mySettings.corner_colorChange =   preferences.getUChar ("co_colorChange", COLORCHANGE_FIVE);
     mySettings.highscore[0] =         preferences.getUShort("highscore0", 0);
     mySettings.highscore[1] =         preferences.getUShort("highscore1", 0);
     mySettings.highscore[2] =         preferences.getUShort("highscore2", 0);
