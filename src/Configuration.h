@@ -115,8 +115,8 @@
 
 
 // Touch Empfindlichkeit
-#define MODE_TOUCH_SENS 1                        // Empfindlichkeit der Mode Touch Sensoren 1-20 (je kleiner desto empfindlicher)
-#define ONOFF_TOUCH_SENS 2                       // Empfindlichkeit der OnOff Touch Sensoren 1-20 (je kleiner desto empfindlicher)
+#define MODE_TOUCH_SENS 3                        // Empfindlichkeit der Mode Touch Sensoren 1-20 (je kleiner desto empfindlicher)
+#define ONOFF_TOUCH_SENS 3                       // Empfindlichkeit der OnOff Touch Sensoren 1-20 (je kleiner desto empfindlicher)
 
 // Ist ein BME280 an Board
 #define SENSOR_BME280
