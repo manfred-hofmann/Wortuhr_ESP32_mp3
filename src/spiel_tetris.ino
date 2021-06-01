@@ -73,7 +73,7 @@ void runTetris(void){
       gameisrunning = false;
       break;
     }
-  
+    
     if (activeBrick.enabled){
       shiftActiveBrick(DIR_DOWN);
     } else {
@@ -87,9 +87,9 @@ void runTetris(void){
 #ifdef AUDIO_SOUND
       if (gamesound) Play_MP3(802,false,33*gamesound);   //impact
 #endif
-    delay(50);
+    delay(100);
     webServer.handleClient();
-    delay(50);
+    delay(100);
     }
     printField();
   }
@@ -203,6 +203,9 @@ void newActiveBrick(){
 //  uint8_t selectedBrick = 3;
 
 #ifdef AUDIO_SOUND
+      while (!digitalRead(PIN_AUDIO_BUSY)) {
+        delay(20);
+      }
       if (gamesound) Play_MP3(801,false,33*gamesound - 20);       // neues Item
 #endif
   uint8_t selectedBrick = nextbrick;
@@ -435,6 +438,9 @@ void checkFullLines(){
     if (rowSum>=FIELD_WIDTH){
       pixel_aktiv = pixel_aktiv - FIELD_WIDTH;
 #ifdef AUDIO_SOUND
+      while (!digitalRead(PIN_AUDIO_BUSY)) {
+        delay(20);
+      }
       if (gamesound) Play_MP3(803,false,33*gamesound);         //slide
 #endif
       delay(250);
