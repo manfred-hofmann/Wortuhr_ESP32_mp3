@@ -26,7 +26,7 @@
 // CPU Frequenz auf 240 MHz
 // Partition Schema: "Standard"
 
-// Im Normalbetrieb immer alle DEBUG Schalter aus. ( siehe configuration.h)
+// Im Normalbetrieb immer alle DEBUG Schalter aus.
 
 // folgende Libraries werden benötigt:
 
@@ -56,7 +56,7 @@
 //Click on the text area and then select the specific version and install it.
 
 
-#define FIRMWARE_VERSION "ESP32_20210527"
+#define FIRMWARE_VERSION "ESP32_20210601"
 
 #include <Arduino.h>
 #include <Arduino_JSON.h>
@@ -527,12 +527,16 @@ int  wifiversuche = 0;
 #endif
     WiFi.softAP(settings.mySettings.systemname.c_str());
     WiFi.softAPConfig(apIP, apIP, netMsk);
+#ifdef DEBUG
     Serial.println("No WLAN connected. Staying in AP mode.");
+#endif
     WiFi.mode(WIFI_AP);
     delay(2000);
     myIP = WiFi.softAPIP();
+#ifdef DEBUG
     Serial.println("AP IP address: ");
     Serial.println(myIP);
+#endif
     // Starte DNS Server für captive portal
     dnsServer.setErrorReplyCode(DNSReplyCode::NoError); 
     dnsServer.start(DNS_PORT, "*", apIP);
@@ -562,12 +566,14 @@ int  wifiversuche = 0;
     myIP = WiFi.localIP();
     STA_ssid = WiFi.SSID();
     STA_pass = WiFi.psk();
+#ifdef DEBUG
     Serial.print("Hostname: ");
     Serial.println(settings.mySettings.systemname);
     Serial.print("STA IP address: ");
     Serial.println(myIP);
     Serial.print("SSID: ");
     Serial.println(STA_ssid);
+#endif
 //    Serial.print("Passwort: ");
 //    Serial.println(STA_pass);    
 
