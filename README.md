@@ -7,6 +7,8 @@ ESP32 Wortuhr mit Sound, Wetter, Spiele, Transitions, Webzugriff
 * Mondphase wird in Abwechslung der Temp. und Datumsanzeige angezeigt.  
 * Die Minuten LED können nun eine eigene Farbe haben.  
 * Silvester CountDown.  
+* Zwei Eingabe Taster sind möglich: On/Off und Mode. 
+  Diese sind per Touch oder als physikalischer Taster in configuration.h einstellbar.  
 
 
 ## Teperatur und Luftdruck:  
