@@ -11,7 +11,7 @@ ESP32 Wortuhr mit Sound, Wetter, Spiele, Transitions, Webzugriff
   Diese sind per Touch oder als physikalischer Taster in configuration.h einstellbar.  
 
 
-## Teperatur und Luftdruck:  
+## Temperatur und Luftdruck:  
 * Als Temp. Sensor hatte ich einen BME280.  
 * Aufzeichnen der Temperatur und Anzeige im Webfrontend.  
 * Aufzeichnen des Luftdrucks und Anzeige im Webfrontend.   
@@ -109,7 +109,7 @@ https://github.com/manfred-hofmann/Wortuhr_ESP32_mp3/blob/main/Schaltplan_ESP32_
 	* SunRise: Version 2.0.1  
 * Die mp3 Files (Sound) in einen mp3 Ordner auf die SD-Karte kopieren welche in den mp3-Player kommt.  
 * Software mit Arduino IDE (min. Version 1.8.12) auf den ESP32 laden.  
-* ESP32 starten und mit dem Handy das WLAN des ESP suchen und anmelden.  
+* ESP32 starten und mit dem Handy das WLAN der Wortuhr (WU_ESP32) suchen und anmelden.  
 * Dann sollte automatisch der Browser starten. Hier die WLAN Zugangsdaten eingeben.  
 (Falls der Browser nicht startet die Default IP des AP ist 172.20.2.1)  
 (Falls es damit auch Probleme gibt können die WLAN Parameter auch direkt in configuration.h gepflegt werden.)  
