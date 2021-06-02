@@ -107,7 +107,7 @@ https://github.com/manfred-hofmann/Wortuhr_ESP32_mp3/blob/main/Schaltplan_ESP32_
 	* Adafruit Unified Sensor Version 1.1.4  
 	* Adafruit Neopixel: Version 1.8.0  
 	* SunRise: Version 2.0.1  
-* Die mp3 Files (Sound) in einen mp3 Ordner auf die SD-Karte kopieren welche in den mp3-Player kommt.  
+* Die mp3 Files (Sound) in den Ordner "mp3" auf die SD-Karte kopieren welche in den mp3-Player kommt. Es reicht eine 4GB Karte.
 * Software mit Arduino IDE (min. Version 1.8.12) auf den ESP32 laden.  
 * ESP32 starten und mit dem Handy das WLAN der Wortuhr (WU_ESP32) suchen und anmelden.  
 * Dann sollte automatisch der Browser starten. Hier die WLAN Zugangsdaten eingeben.  
@@ -118,7 +118,7 @@ https://github.com/manfred-hofmann/Wortuhr_ESP32_mp3/blob/main/Schaltplan_ESP32_
 ![Spiffs1](https://github.com/manfred-hofmann/Wortuhr_ESP32_mp3/blob/main/pic/spiffs1.JPG "Spiffs1")
 * Hier das komplette data Verzeichniss hochladen.  
 ![Spiffs2](https://github.com/manfred-hofmann/Wortuhr_ESP32_mp3/blob/main/pic/spiffs2.JPG "Spiffs2")
-* __Evtl. nochmal die configuration.h durchgehen und die Einstellungen den eigenen Gegebenheiten anpassen!__  
+* __Evtl. nochmal die configuration.h durchgehen und die Einstellungen den eigenen Gegebenheiten anpassen!__   
 * restliche Einstellungen sind auf der Settings Seite zu finden  
 
 Alles weiter findet sich auf http://diskussion.christians-bastel-laden.de/viewforum.php?f=23  
