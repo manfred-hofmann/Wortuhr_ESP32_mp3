@@ -117,9 +117,9 @@ yrnoclient -> setInsecure();                  //ohne Certificate Check
     {
       retcode = retcode + 8;
     }
-    if(! isnan((int)weatherArray["data"]["instant"]["details"]["wind_speed"]))
+    if(! isnan((double)weatherArray["data"]["instant"]["details"]["wind_speed"]))
     {
-      windspeed = (int)weatherArray["data"]["instant"]["details"]["wind_speed"];  
+      windspeed = (double)weatherArray["data"]["instant"]["details"]["wind_speed"];  
     }
     else
     {
