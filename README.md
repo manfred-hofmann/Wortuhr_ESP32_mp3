@@ -114,7 +114,7 @@ https://github.com/manfred-hofmann/Wortuhr_ESP32_mp3/blob/main/Schaltplan_ESP32_
 (Falls der Browser nicht startet die Default IP des AP ist 172.20.2.1)  
 (Falls es damit auch Probleme gibt können die WLAN Parameter auch direkt in configuration.h gepflegt werden.)  
 * Danach startet der ESP32 neu. Jetzt mit dem Laptop auf die spiffs.html Webseite der ESP-Adresse gehen:  
-    http://<ESP32-IP>/spiffs.html  
+    http://ESP32-IP/spiffs.html  
 ![Spiffs1](https://github.com/manfred-hofmann/Wortuhr_ESP32_mp3/blob/main/pic/spiffs1.JPG "Spiffs1")
 * Hier das komplette data Verzeichniss hochladen.  
 ![Spiffs2](https://github.com/manfred-hofmann/Wortuhr_ESP32_mp3/blob/main/pic/spiffs2.JPG "Spiffs2")
