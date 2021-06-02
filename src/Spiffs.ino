@@ -53,7 +53,7 @@ bool handleFile(String&& path) {
     sendResponce();
     return true;
   }
-  if (!SPIFFS.exists("/spiffs.html"))webServer.send(200, "text/html", HELPER);                 // ermöglicht das hochladen der spiffs.html
+  if (!SPIFFS.exists("/spiffs.html") && WiFi.getMode() == WIFI_STA )webServer.send(200, "text/html", HELPER);                 // ermöglicht das hochladen der spiffs.html
   if (path.endsWith("/")) path += "index.html";
   return SPIFFS.exists(path) ? ({File f = SPIFFS.open(path); webServer.streamFile(f, StaticRequestHandler::getContentType(path)); f.close(); true;}) : false;
 }

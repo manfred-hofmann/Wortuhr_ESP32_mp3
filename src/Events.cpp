@@ -31,6 +31,7 @@ bool loadEvents()
     events[z].postani="";
     events[z].intervall=0;
   }
+  if (!file.available()) return false;
   while (file.available()) 
   {
     jsonBuffer = file.readStringUntil('\r');
