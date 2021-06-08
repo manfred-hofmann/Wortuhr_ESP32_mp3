@@ -107,6 +107,7 @@ https://github.com/manfred-hofmann/Wortuhr_ESP32_mp3/blob/main/Schaltplan_ESP32_
 	* Adafruit Unified Sensor Version 1.1.4  
 	* Adafruit Neopixel: Version 1.8.0  
 	* SunRise: Version 2.0.1  
+	* Evt. EspSoftwareSerial wenn die Fehlermeldung "gpio.h fehlt" erscheint.
 * Die mp3 Files (Sound) in den Ordner "mp3" auf die SD-Karte kopieren welche in den mp3-Player kommt. Es reicht eine 4GB Karte.
 * Software mit Arduino IDE (min. Version 1.8.12) auf den ESP32 laden.  
 * ESP32 starten und mit dem Handy das WLAN der Wortuhr (WU_ESP32) suchen und anmelden.  
