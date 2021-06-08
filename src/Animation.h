@@ -14,7 +14,7 @@
 
 #define HOSTNAME "WORTUHR"
 
-#define MAXFRAMES 20
+#define MAXFRAMES 25
 #define MAXANIMATION 50
 #define ANIMATIONSLISTE "/animationsliste.json"
 

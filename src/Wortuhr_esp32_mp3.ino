@@ -36,7 +36,7 @@
 //Then search for DFRobotDFPlayer using the search bar.
 //Click on the text area and then select the specific version and install it.
 
-//BME280:
+//Adafruit BME280: 2.1.4 + Adafruit Unified Sensor 1.1.4
 //Open your Arduino IDE and go to Sketch > Include Library > Manage Libraries. The Library Manager should open.
 //Search for “adafruit bme280 ” on the Search box and install the library. --> Adafruit_BME280.h
 //To use the BME280 library, you also need to install the Adafruit_Sensor library. Follow the next steps to install the library in your Arduino IDE:
@@ -347,6 +347,7 @@ void setup()
 	while (!Serial);
 	delay(1000);
   setTime(12,0,0,1,2,2003);
+  Serial.println(F("* * S T A R T * *"));
 	settings.loadFromNVS();
 	Serial.println();
 	Serial.println("****** " + settings.mySettings.systemname + " ******");
@@ -4473,7 +4474,9 @@ void debugClock()
   message += "<h2>" + settings.mySettings.systemname + " Info</h2>";
   message += F("<hr>\n"
     "<small><br></small>");
-  message += F("WLan-SID: ");
+  message += F("Firmware: ");
+  message += String(FIRMWARE_VERSION);
+  message += F("<br>WLan-SID: ");
   message += WiFi.SSID();
   message += F("<br>Signalst&aumlrke: ");
   message += WiFi.RSSI();
@@ -4583,8 +4586,8 @@ void debugClock()
 #ifdef PIN_ONOFF_BUTTON_TOUCH
   message += "<br>OnOff Touch Value/Threshold: " + String(onoff_value) + "/" + String(onoff_touchthreshold);
 #endif
-
-//  message += "<br>Reset Grund: " + ESP.getResetReason();
+  message += "<br>Reset Grund CPU0: " + get_reset_reason(0);
+  message += "<br>Reset Grund CPU1: " + get_reset_reason(1);
   message += F("<br>Flags: ");
 #ifdef SENSOR_BME280
   message += F("BME ");
@@ -6403,7 +6406,33 @@ void handlemakeAnimation()
 }
 
 
-
+//##################################################################
+//## Reset Reason
+#include <rom/rtc.h>
+String get_reset_reason(uint8_t cpu)
+{
+  RESET_REASON reason;
+  reason=rtc_get_reset_reason(cpu);
+  switch ( reason)
+  {
+    case 1  : return "Vbat power on reset";break;
+    case 3  : return "Software reset digital core";break;
+    case 4  : return "Legacy watch dog reset digital core";break;
+    case 5  : return "Deep Sleep reset digital core";break;
+    case 6  : return "Reset by SLC module, reset digital core";break;
+    case 7  : return "Timer Group0 Watch dog reset digital core";break;
+    case 8  : return "Timer Group1 Watch dog reset digital core";break;
+    case 9  : return "RTC Watch dog Reset digital core";break;
+    case 10 : return "Instrusion tested to reset CPU";break;
+    case 11 : return "Time Group reset CPU";break;
+    case 12 : return "Software reset CPU";break;
+    case 13 : return "RTC Watch dog Reset CPU";break;
+    case 14 : return "for APP CPU, reseted by PRO CPU";break;
+    case 15 : return "Reset when the vdd voltage is not stable";break;
+    case 16 : return "RTC Watch dog reset digital core and rtc module";break;
+    default : return "NO_MEAN";
+  }
+}
 
 //##################################################################
 //################ Sekunden LED Task ###############################
