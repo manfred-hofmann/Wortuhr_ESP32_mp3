@@ -137,8 +137,8 @@ Hier ein Beispiel Layout:
 ![LED-Layout](https://github.com/manfred-hofmann/Wortuhr_ESP32_mp3/blob/main/pic/LED-Beispiel-Layout.jpg "LED-Layout")   
 
 Möchte man auf die "Alarm LED" verzichten, so muss in der configuration.h die Anzahl der LEDs angepasst werden:  
-#define NUMPIXELS 114 -> ohne eigen Alarm LED
-#define NUMPIXELS 115 -> mit Alarm LED
+#define NUMPIXELS 114 -> ohne eigen Alarm LED  
+#define NUMPIXELS 115 -> mit Alarm LED  
 
 
 ## Inbetriebnahme:  
