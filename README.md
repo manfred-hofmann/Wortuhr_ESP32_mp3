@@ -115,7 +115,8 @@ Hierbei ist zu beachten:
 die ersten 10 Zeilen in ledMap sind die LEDs für die Wörter.
 die letzte Zeile sind die Minuten LEDs angefangen links oben, rechts oben, rechts unten, links unten und die Alarm LED.  
 Die Zahlen entsprechen der LED-Nummer in der LED-Kette:   
-```#ifdef LED_LAYOUT_HORIZONTAL_2  
+```
+    #ifdef LED_LAYOUT_HORIZONTAL_2  
     uint8_t ledMap[] = {  
      109, 108, 107, 106, 105, 104, 103, 102, 101, 100,  99,
       88,  89,  90,  91,  92,  93,  94,  95,  96,  97,  98,
