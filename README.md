@@ -99,6 +99,47 @@ Bricks
 ## Schaltplan:
 https://github.com/manfred-hofmann/Wortuhr_ESP32_mp3/blob/main/Schaltplan_ESP32_wortuhr_mp3.pdf  
 
+## LED-Layout: 
+Es können verschiedene LED Layouts verwendet werden.  
+In der configuration.h sind 4 voreingestellte Layouts zu finden:  
+
+// Das LED Layout (Siehe in LedDriver.cpp):  
+#define LED_LAYOUT_HORIZONTAL_2  
+//#define LED_LAYOUT_VERTICAL_1  
+//#define LED_LAYOUT_VERTICAL_2  
+//#define LED_LAYOUT_VERTICAL_3  
+
+Die Layouts sind in LedDriver.cpp  definiert.
+Hier können nach belieben auch eigene angelegt werden.
+Hierbei ist zu beachten:  
+die ersten 10 Zeilen in ledMap sind die LEDs für die Wörter.
+die letzte Zeile sind die Minuten LEDs angefangen links oben, rechts oben, rechts unten, links unten und die Alarm LED.  
+Die Zahlen entsprechen der LED-Nummer in der LED-Kette:   
+```#ifdef LED_LAYOUT_HORIZONTAL_2  
+    uint8_t ledMap[] = {  
+     109, 108, 107, 106, 105, 104, 103, 102, 101, 100,  99,
+      88,  89,  90,  91,  92,  93,  94,  95,  96,  97,  98,
+      87,  86,  85,  84,  83,  82,  81,  80,  79,  78,  77,
+      66,  67,  68,  69,  70,  71,  72,  73,  74,  75,  76,
+      65,  64,  63,  62,  61,  60,  59,  58,  57,  56,  55,
+      44,  45,  46,  47,  48,  49,  50,  51,  52,  53,  54,
+      43,  42,  41,  40,  39,  38,  37,  36,  35,  34,  33,
+      22,  23,  24,  25,  26,  27,  28,  29,  30,  31,  32,
+      21,  20,  19,  18,  17,  16,  15,  14,  13,  12,  11,
+       0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,
+     110, 111, 112, 114, 113
+    };
+#endif
+```
+
+Hier ein Beispiel Layout:  
+![LED-Layout](https://github.com/manfred-hofmann/Wortuhr_ESP32_mp3/blob/main/pic/LED-Beispiel-Layout.jpg "LED-Layout")   
+
+Möchte man auf die "Alarm LED" verzichten, so muss in der configuration.h die Anzahl der LEDs angepasst werden:  
+#define NUMPIXELS 114 -> ohne eigen Alarm LED
+#define NUMPIXELS 115 -> mit Alarm LED
+
+
 ## Inbetriebnahme:  
 * folgende Libraries werden benötigt (min. Versionen) (alle zu finden unter Bibliotheken verwalten):  
     * ESP32 Board Version 1.0.6  
@@ -121,6 +162,8 @@ https://github.com/manfred-hofmann/Wortuhr_ESP32_mp3/blob/main/Schaltplan_ESP32_
 ![Spiffs2](https://github.com/manfred-hofmann/Wortuhr_ESP32_mp3/blob/main/pic/spiffs2.JPG "Spiffs2")
 * __Evtl. nochmal die configuration.h durchgehen und die Einstellungen den eigenen Gegebenheiten anpassen!__   
 * restliche Einstellungen sind auf der Settings Seite zu finden  
+
+-----
 
 Alles weiter findet sich auf http://diskussion.christians-bastel-laden.de/viewforum.php?f=23  
 
