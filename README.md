@@ -166,5 +166,9 @@ Möchte man auf die "Alarm LED" verzichten, so muss in der configuration.h die A
 
 -----
 
-Alles weiter findet sich auf http://diskussion.christians-bastel-laden.de/viewforum.php?f=23  
+Alles weiter findet sich auf http://diskussion.christians-bastel-laden.de/viewforum.php?f=23   
+  
+Ein Beispielvideo ist hier zu sehen:   
+https://www.youtube.com/watch?v=rQZoOGkao-w
+  
 
