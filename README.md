@@ -123,3 +123,4 @@ https://github.com/manfred-hofmann/Wortuhr_ESP32_mp3/blob/main/Schaltplan_ESP32_
 * restliche Einstellungen sind auf der Settings Seite zu finden  
 
 Alles weiter findet sich auf http://diskussion.christians-bastel-laden.de/viewforum.php?f=23  
+
