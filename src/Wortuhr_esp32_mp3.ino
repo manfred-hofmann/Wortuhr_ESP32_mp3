@@ -853,7 +853,6 @@ void loop()
 #ifdef DEBUG
     Serial.printf("Date: %02u.%02u.%02u  %02u:%02u:%02u\r\n", aktDay, month(), year(),aktHour,aktMinute,aktSecond);
 		Serial.printf("Uptime: %u days, %02u:%02u\r\n", int(upTime / 86400), hour(upTime), minute(upTime));
-		Serial.printf("Free RAM: %u bytes\r\n", system_get_free_heap_size());
 		Serial.printf("Moonphase: %u\r\n", moonphase);
 #endif
 
