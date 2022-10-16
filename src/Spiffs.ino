@@ -10,7 +10,9 @@ void spiffs() {                                                                 
   webServer.on("/format", formatFS);
   webServer.on("/upload", HTTP_POST, sendResponce, handleFileUpload);
   webServer.onNotFound([]() {
+#ifdef DEBUG_WEB
      Serial.printf(" WebRequest File: %s\n", webServer.urlDecode(webServer.uri()).c_str()); 
+#endif
     if (!handleFile(webServer.urlDecode(webServer.uri())))
     {
       if ( !captivePortal(webServer.uri())) webServer.send(404, "text/plain", "FileNotFound");
@@ -38,7 +40,8 @@ void handleList() {                                                             
   String temp = "[";
   for (auto& p : dirList) {
     if (temp != "[") temp += ',';
-    temp += "{\"name\":\"" + p.first.substring(1) + "\",\"size\":\"" + formatBytes(p.second) + "\"}";
+//    temp += "{\"name\":\"" + p.first.substring(1) + "\",\"size\":\"" + formatBytes(p.second) + "\"}";
+    temp += "{\"name\":\"" + p.first + "\",\"size\":\"" + formatBytes(p.second) + "\"}";
   }
   temp += R"(,{"usedBytes":")" + formatBytes(SPIFFS.usedBytes() * 1.05) + R"(",)" +         // Berechnet den verwendeten Speicherplatz + 5% Sicherheitsaufschlag
           R"("totalBytes":")" + formatBytes(SPIFFS.totalBytes()) + R"(","freeBytes":")" +   // Zeigt die Größe des Speichers

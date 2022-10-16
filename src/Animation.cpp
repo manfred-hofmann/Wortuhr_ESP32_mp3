@@ -17,14 +17,14 @@ void getAnimationList()
   for ( uint8_t z = 0;z <= MAXANIMATION;z++) myanimationslist[z] = "";
   File file = root.openNextFile();
   while (file) {    
-    aidx = String(file.name()).indexOf("/ani_");
+    aidx = String(file.name()).indexOf("ani_");
     
     if ( aidx >= 0 ) 
     {
       sidx = String(file.name()).lastIndexOf(".json");
       if ( sidx >= 0)
       {
-        Aname = String(file.name()).substring(aidx+5,sidx);
+        Aname = String(file.name()).substring(aidx+4,sidx);
         if ( Aname != "NEU" ) 
         {
 //        Serial.println ( myanimationslist[lidx] );
