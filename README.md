@@ -1,6 +1,10 @@
 # Wortuhr_ESP32_mp3
 ESP32 Wortuhr mit Sound, Wetter, Spiele, Transitions, Webzugriff  
 -----------------------------------------------------------------
+## Hinweis:
+Das Wortuhrprojekt mit ESP32 wird nicht mehr weiterentwickelt, da mich die Leistungen des ESP32 nicht überzeugt haben (zu wenig Speicher für SPIFFS, Platzbedarf des Programm im Speichers zu hoch, Multitasking nicht zufriedenstellend)  
+Deswegen würde ich meine ESP8266 Version vorziehen.  
+(https://github.com/manfred-hofmann/Wortuhr_ESP8266)  
 
 ## Sonstiges:  
 * Automatischer W-Lan Reconnect.  
